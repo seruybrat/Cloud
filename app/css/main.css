@@ -82,7 +82,7 @@ body {
   left: 0;
   margin: auto; }
 
-.sidebar__info__inner:after, .article:after, .post__top:after, .post__bottom:after {
+.sidebar__info__inner:after, .article:after, .post__top:after, .post__bottom:after, .progressbar:after {
   content: '';
   display: table;
   clear: both; }
@@ -651,10 +651,19 @@ body {
           border-top-left-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
           border-bottom-left-radius: 5px;
-  border-top: 2px solid #fb8c00;
   padding: 30px 20px;
-  -webkit-box-shadow: 4px 0px 32px 0px rgba(0, 0, 0, 0.27);
-          box-shadow: 4px 0px 32px 0px rgba(0, 0, 0, 0.27); }
+  -webkit-box-shadow: 4px 0px 16px 0px rgba(0, 0, 0, 0.37);
+          box-shadow: 4px 0px 16px 0px rgba(0, 0, 0, 0.37);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  z-index: 1; }
+  .registration.active, .enter.active, .error {
+    background-color: #fff;
+    border-top: 2px solid #fb8c00;
+    -webkit-box-shadow: 4px 0px 32px 0px rgba(0, 0, 0, 0.27);
+            box-shadow: 4px 0px 32px 0px rgba(0, 0, 0, 0.27);
+    position: relative;
+    z-index: 2; }
   .registration_form, .enter_form {
     text-align: left;
     margin-top: 33px; }
@@ -677,7 +686,10 @@ body {
           border-bottom-right-radius: 5px;
   padding: 30px 20px;
   -webkit-box-shadow: 4px 0px 16px 0px rgba(0, 0, 0, 0.37);
-          box-shadow: 4px 0px 16px 0px rgba(0, 0, 0, 0.37); }
+          box-shadow: 4px 0px 16px 0px rgba(0, 0, 0, 0.37);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  z-index: 1; }
 
 .login__input {
   display: block;
@@ -770,10 +782,73 @@ body {
 
 .slide__text {
   color: #263238;
-  font-style: italic; }
+  font-style: italic;
+  line-height: 26px; }
 
 /*-------- log - footer -------*/
 .log-footer {
   text-align: center;
   padding-bottom: 30px;
   color: #616161; }
+
+/*-------- create - pass -------*/
+.create-pass, .error {
+  width: 485px;
+  margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
+  margin-top: -80px; }
+
+.log__p {
+  text-align: left;
+  color: #263238;
+  margin-top: 40px;
+  line-height: 26px; }
+
+/*-------- progress - bar -------*/
+.progressbar__item {
+  display: inline-block;
+  width: 24%;
+  height: 10px;
+  text-align: justify; }
+  .progressbar__item:nth-child(1) {
+    background-color: #2196f3; }
+  .progressbar__item:nth-child(2) {
+    background-color: #1e88e5; }
+  .progressbar__item:nth-child(3) {
+    background-color: #1976d2; }
+  .progressbar__item:nth-child(4) {
+    background-color: #1565c0; }
+
+.progressbar__status {
+  color: #1e88e5;
+  padding: 15px 0 40px 10px; }
+
+/*-------- error-page -------*/
+.error {
+  width: 80%;
+  padding: 55px 50px 45px;
+  margin-bottom: 100px; }
+  .error__title {
+    color: #263238;
+    font-size: 3.75em; }
+  .error__img {
+    padding: 15px 0; }
+  .error__icon, .thanks__icon {
+    color: #ff5722;
+    font-size: 5em; }
+  .error__text, .error__text--en {
+    color: #263238;
+    font-size: 2em; }
+  .error__feedb, .forget__feedb {
+    padding-top: 70px;
+    color: #78909c;
+    font-size: 0.875em; }
+
+/*-------- forget - pass -------*/
+.forget__feedb {
+  padding-top: 20px; }
+
+/*-------- thanks -------*/
+.thanks__icon {
+  color: #00c853; }

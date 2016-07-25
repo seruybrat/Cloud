@@ -82,7 +82,7 @@ body {
   left: 0;
   margin: auto; }
 
-.sidebar__info__inner:after, .article:after, .post__top:after, .post__bottom:after {
+.sidebar__info__inner:after, .article:after, .post__top:after, .post__bottom:after, .progressbar:after {
   content: '';
   display: table;
   clear: both; }
@@ -627,3 +627,228 @@ body {
 .buttons--right {
   text-align: right;
   padding-top: 30px; }
+
+/*-------- login -------*/
+.login {
+  margin-top: -80px;
+  text-align: center; }
+  .login-top {
+    height: 380px;
+    width: 100%;
+    padding-top: 45px;
+    text-align: center;
+    background: url("../img/log-bg.jpg");
+    background-size: cover;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.33);
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.33); }
+
+.logo {
+  display: inline-block; }
+
+.registration {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-border-top-left-radius: 5px;
+          border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+  padding: 30px 20px;
+  -webkit-box-shadow: 4px 0px 16px 0px rgba(0, 0, 0, 0.37);
+          box-shadow: 4px 0px 16px 0px rgba(0, 0, 0, 0.37);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  z-index: 1; }
+  .registration.active, .enter.active, .error {
+    background-color: #fff;
+    border-top: 2px solid #fb8c00;
+    -webkit-box-shadow: 4px 0px 32px 0px rgba(0, 0, 0, 0.27);
+            box-shadow: 4px 0px 32px 0px rgba(0, 0, 0, 0.27);
+    position: relative;
+    z-index: 2; }
+  .registration_form, .enter_form {
+    text-align: left;
+    margin-top: 33px; }
+
+.placeholder {
+  display: inline-block;
+  font-size: 1em;
+  color: #757575;
+  padding-left: 10px;
+  position: relative;
+  top: -33px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
+.enter {
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-border-top-right-radius: 5px;
+          border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+  padding: 30px 20px;
+  -webkit-box-shadow: 4px 0px 16px 0px rgba(0, 0, 0, 0.37);
+          box-shadow: 4px 0px 16px 0px rgba(0, 0, 0, 0.37);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  z-index: 1; }
+
+.login__input {
+  display: block;
+  width: 95%;
+  padding: 15px 10px;
+  color: #757575;
+  border: none;
+  border-bottom: 2px solid #bdbdbd;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+  .login__input:focus {
+    border-bottom: 2px solid #1e88e5; }
+    .login__input:focus + .placeholder {
+      font-size: 0.875em;
+      top: -55px;
+      color: #1e88e5; }
+
+.button {
+  margin-top: 10px;
+  border-bottom: none;
+  color: #fff;
+  text-transform: uppercase;
+  background: #1e88e5;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1e88e5), to(#1973c1));
+  background: -webkit-linear-gradient(top, #1e88e5 0%, #1973c1 100%);
+  background: linear-gradient(to bottom, #1e88e5 0%, #1973c1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e88e5', endColorstr='#1973c1', GradientType=0 );
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.33);
+          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.33); }
+
+.enter-help {
+  text-align: center;
+  margin-top: 40px; }
+
+.help__link {
+  display: inline-block;
+  color: #1e88e5;
+  text-decoration: dashed;
+  border-bottom: 1px dashed #1e88e5; }
+
+.err {
+  color: #f44336 !important; }
+  .err-text {
+    display: block;
+    margin-top: 33px;
+    text-align: left;
+    font-size: 1.125em;
+    color: #f44336;
+    visibility: hidden; }
+
+/*-------- log - slider -------*/
+.top-img {
+  margin-top: 50px;
+  text-align: center; }
+  .top-img__pic {
+    display: inline-block;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    border: 2px solid #fff;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.33);
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.33); }
+
+.log-slider {
+  padding: 20px 0 90px; }
+  .log-slider__nav {
+    margin-bottom: 30px;
+    text-align: center; }
+  .log-slider__bar {
+    display: inline-block;
+    position: relative;
+    width: 465px;
+    height: 2px;
+    background-color: #c7d1d6;
+    cursor: pointer; }
+    .log-slider__bar_active {
+      display: inline-block;
+      width: 155px;
+      height: 6px;
+      position: absolute;
+      left: 155px;
+      top: -2px;
+      background: #fbc12d;
+      background: -webkit-gradient(linear, left top, left bottom, from(#fbc12d), to(#f68819));
+      background: -webkit-linear-gradient(top, #fbc12d 0%, #f68819 100%);
+      background: linear-gradient(to bottom, #fbc12d 0%, #f68819 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbc12d', endColorstr='#f68819', GradientType=0 );
+      cursor: pointer; }
+
+.slide__text {
+  color: #263238;
+  font-style: italic;
+  line-height: 26px; }
+
+/*-------- log - footer -------*/
+.log-footer {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #616161; }
+
+/*-------- create - pass -------*/
+.create-pass, .error {
+  width: 485px;
+  margin: 0 auto;
+  background-color: #fff;
+  text-align: center;
+  margin-top: -80px; }
+
+.log__p {
+  text-align: left;
+  color: #263238;
+  margin-top: 40px;
+  line-height: 26px; }
+
+/*-------- progress - bar -------*/
+.progressbar__item {
+  display: inline-block;
+  width: 24%;
+  height: 10px;
+  text-align: justify; }
+  .progressbar__item:nth-child(1) {
+    background-color: #2196f3; }
+  .progressbar__item:nth-child(2) {
+    background-color: #1e88e5; }
+  .progressbar__item:nth-child(3) {
+    background-color: #1976d2; }
+  .progressbar__item:nth-child(4) {
+    background-color: #1565c0; }
+
+.progressbar__status {
+  color: #1e88e5;
+  padding: 15px 0 40px 10px; }
+
+/*-------- error-page -------*/
+.error {
+  width: 80%;
+  padding: 55px 50px 45px;
+  margin-bottom: 100px; }
+  .error__title {
+    color: #263238;
+    font-size: 3.75em; }
+  .error__img {
+    padding: 15px 0; }
+  .error__icon, .thanks__icon {
+    color: #ff5722;
+    font-size: 5em; }
+  .error__text, .error__text--en {
+    color: #263238;
+    font-size: 2em; }
+  .error__feedb, .forget__feedb {
+    padding-top: 70px;
+    color: #78909c;
+    font-size: 0.875em; }
+
+/*-------- forget - pass -------*/
+.forget__feedb {
+  padding-top: 20px; }
+
+/*-------- thanks -------*/
+.thanks__icon {
+  color: #00c853; }

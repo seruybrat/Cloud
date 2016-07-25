@@ -26,11 +26,17 @@ $(document).ready(function(){
 		$(".popup-bg").fadeToggle();
 	});
 
-	var maxHeight = 0;
-	$(".eq-height").each(function(){
-   if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
-	});
+	function equlizer(myclass) {
+			var maxHeight = 0;
+			$(myclass).each(function(){
+		   if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+			});
 
-	$(".eq-height").height(maxHeight);
+			$(myclass).height(maxHeight);
+
+		}
+
+	equlizer('.eq-height');
+	equlizer('.log-height');
 
 });

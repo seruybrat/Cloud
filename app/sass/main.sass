@@ -528,9 +528,16 @@ body
 	background-color: rgba(#fff, .8)
 	border-top-left-radius: 5px
 	border-bottom-left-radius: 5px
-	border-top: 2px solid #fb8c00
 	padding: 30px 20px
-	box-shadow: 4px 0px 32px 0px rgba(0,0,0,0.27)
+	box-shadow: 4px 0px 16px 0px rgba(0,0,0,0.37)
+	transition: all .3s ease
+	z-index: 1
+	&.active
+		background-color: #fff
+		border-top: 2px solid #fb8c00
+		box-shadow: 4px 0px 32px 0px rgba(0,0,0,0.27)
+		position: relative
+		z-index: 2
 	&_form
 		text-align: left
 		margin-top: 33px
@@ -548,6 +555,10 @@ body
 	border-bottom-right-radius: 5px
 	padding: 30px 20px
 	box-shadow: 4px 0px 16px 0px rgba(0,0,0,0.37)
+	transition: all .3s ease
+	z-index: 1
+	&.active
+		@extend .registration.active
 	&_form
 		@extend .registration_form
 .login__input
@@ -630,6 +641,7 @@ body
 	&__text
 		color: #263238
 		font-style: italic
+		line-height: 26px
 
 /*-------- log - footer -------*/
 
@@ -637,3 +649,79 @@ body
 	text-align: center
 	padding-bottom: 30px
 	color: #616161
+
+/*-------- create - pass -------*/
+
+.create-pass
+	width: 485px
+	margin: 0 auto
+	background-color: #fff
+	text-align: center
+	margin-top: -80px
+.log__p
+	text-align: left
+	color: #263238
+	margin-top: 40px
+	line-height: 26px
+
+/*-------- progress - bar -------*/
+
+.progressbar
+	@extend %clearfix
+	&__item
+		display: inline-block
+		width: 24%
+		height: 10px
+		text-align: justify
+		&:nth-child(1)
+			background-color: #2196f3
+		&:nth-child(2)
+			background-color: #1e88e5
+		&:nth-child(3)
+			background-color: #1976d2
+		&:nth-child(4)
+			background-color: #1565c0
+	&__status
+		color: #1e88e5
+		padding: 15px 0 40px 10px
+
+/*-------- error-page -------*/
+
+.error
+	@extend .registration.active
+	@extend .create-pass
+	width: 80%
+	padding: 55px 50px 45px
+	margin-bottom: 100px
+	&__title
+		color: #263238
+		font-size: 3.75em
+	&__img
+		padding: 15px 0
+	&__icon
+		color: #ff5722
+		font-size: 5em
+	&__text
+		color: #263238
+		font-size: 2em
+		&--en
+			@extend .error__text
+	&__feedb
+		padding-top: 70px
+		color: #78909c
+		font-size: 0.875em
+
+/*-------- forget - pass -------*/
+
+.forget
+	&__feedb
+		@extend .error__feedb
+		padding-top: 20px
+
+/*-------- thanks -------*/
+
+.thanks
+	&__icon
+		@extend .error__icon
+		color: #00c853
+
