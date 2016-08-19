@@ -140,6 +140,9 @@ body {
 .purple {
   background-color: #e91e63; }
 
+.yellow {
+  background-color: #ff9800; }
+
 .blue {
   background-color: #03a9f4; }
 
@@ -231,7 +234,7 @@ body {
           display: none; }
         .header__profile-wrap.active .off {
           display: inline-block; }
-    .header__profile-pic, .chat__user-pic, .chat__admin-pic {
+    .header__profile-pic, .post-user__pic, .chat__user-pic, .chat__admin-pic {
       width: 50px;
       height: 50px;
       -webkit-border-radius: 50%;
@@ -586,6 +589,9 @@ body {
 .bg {
   background: url(../img/bg.jpg) no-repeat;
   background-position: center bottom; }
+
+.bl-count {
+  font-size: 16px; }
 
 /*-------- pop-up -------*/
 .popup-bg {
