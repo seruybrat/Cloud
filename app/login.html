@@ -34,9 +34,11 @@
 							<div class="col-sm-6">
 								<div class=	"registration log-height active">
 									<div class="post-title">Зарегистрироваться</div>
-									<span class="err-text">
+									<div class="err-wrap">
+										<span class="err-text">
 										Заполните, пожалуйста, все поля формы!
-									</span>
+										</span>
+									</div>
 									<form action="" class="registration_form">	
 										<input class="login__input" type="text" id="name">
 										<label class="placeholder" for="name">Имя</label>
@@ -53,12 +55,14 @@
 							<div class="col-sm-6">
 								<div class="enter log-height">
 									<div class="post-title">Войти в кабинет</div>
-									<span class="err-text">
+									<div class="err-wrap">
+										<span class="err-text">
 										Заполните, пожалуйста, все поля формы!
-									</span>
+										</span>
+									</div>
 									<form action="" class="enter_form">
-										<input class="login__input" type="text" id="e-mail">
-										<label class="placeholder err" for="e-mail">Ваш e-mail</label>
+										<input class="login__input err" type="text" id="e-mail">
+										<label class="placeholder" for="e-mail">Ваш e-mail</label>
 										<input class="login__input" type="text" id="password">
 										<label class="placeholder" for="password">Пароль</label>
 										<input class="login__input button" type="submit" value="Войти">

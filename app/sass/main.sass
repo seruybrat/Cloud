@@ -56,6 +56,8 @@ body
 	background-color: #4caf50
 .purple
 	background-color: #e91e63
+.yellow
+	background-color: #ff9800
 .blue
 	background-color: $main-color
 
@@ -399,7 +401,7 @@ body
 /*-------- main -------*/
 
 .main
-	background-color: rgba(255,255,255,0.4)
+	/* background-color: rgba(255,255,255,0.4) */
 	position: relativ
 .article
 	margin-top: 26px
@@ -465,6 +467,8 @@ body
 			float: right
 			cursor: pointer
 			color: #607d8b
+.post-user__pic
+	@extend .header__profile-pic
 .title-line
 	display: block
 	width: 70px
@@ -472,6 +476,8 @@ body
 .bg
 	background: url(../img/bg.jpg) no-repeat
 	background-position: center bottom
+.bl-count
+	font-size: 16px
 
 /*-------- pop-up -------*/
 
@@ -569,7 +575,7 @@ body
 	border: none
 	border-bottom: 2px solid #bdbdbd
 	transition: all .3s ease
-	&:focus
+	&:focus, &.active
 		border-bottom: 2px solid #1e88e5
 		& + .placeholder
 			font-size: 0.875em
@@ -593,14 +599,18 @@ body
 	text-decoration: dashed
 	border-bottom: 1px dashed #1e88e5
 .err
-	color: #f44336 !important
+	border-bottom: 2px solid #f44336
+	& + .placeholder
+		color: #f44336 !important
 	&-text
 		display: block
+	&-wrap
+		height: 25px
 		margin-top: 33px
 		text-align: left
 		font-size: 1.125em
 		color: #f44336
-		visibility: hidden
+		box-sizing: border-box
 
 /*-------- log - slider -------*/
 
@@ -725,3 +735,154 @@ body
 		@extend .error__icon
 		color: #00c853
 
+/*-------- Profile -------*/
+
+.profile
+	padding: 15px 0px 0 35px
+	&__title
+		padding: 10px 0
+		font-size: 2em
+		color: #263238
+	&__inner
+		@extend %clearfix
+		padding-top: 40px
+	&__pic
+		display: inline-block
+		width: 156px
+		height: 156px
+		border-radius: 50%
+		box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.6)
+	&__photo
+		width: 210px
+		float: left
+		text-align: center
+	&__form
+		float: right
+		@extend %clearfix
+	&__input
+		@extend .login__input
+	&__buttons
+		padding-top: 30px
+		@extend %clearfix
+	&__button
+		display: inline-block
+		padding: 18px 15px
+		color: #607d8b
+		text-transform: uppercase
+		background-color: #fff
+		&.right
+			float: right
+		&.left
+			float: left
+			margin-left: 20px
+		&.active
+			color: #fff
+			border: none
+			border-radius: 3px
+			background-color: $main-color
+			transition: all .3s ease
+			&:hover
+				background-color: darken($main-color, 5%)
+	&__info1
+		float: left
+		width: 65%
+		padding-right: 30px
+		box-sizing: border-box
+	&__info2
+		float: left
+		width: 35%
+		overflow: hidden
+		box-sizing: border-box
+	&__change
+		padding-top: 30px
+		color: $main-color
+		text-transform: uppercase
+		&-img
+			text-align: center
+.photo__info
+	display: inline-block
+	padding-top: 30px
+	color: #90a4ae
+.change__pic
+	display: inline-block
+	width: 424px
+	height: 424px
+.change-mail__form
+	@extend %clearfix
+.change-form__group
+	width: 33%
+	float: left
+	box-sizing: border-box
+	margin-bottom: 25px
+	&:first-child
+		padding-right: 7px
+	&:nth-child(2)
+		padding: 0 14px
+	&:nth-child(3)
+		padding-left: 7px
+.pop-up__succes-change
+	text-align: center
+
+	/*-------- Chat -------*/
+
+.chat
+	padding-left: 30px
+	&__window
+		padding-top: 25px
+		height: 400px
+		overflow: auto
+	&__input
+		@extend .login__input
+	&__enter
+		position: relative
+		margin-right: 100px
+		margin-left: 80px
+	&__user
+		@extend %clearfix
+		&-pic
+			float: right
+			@extend .header__profile-pic
+	&__admin
+		@extend %clearfix
+		&-pic
+			float: left
+			@extend .header__profile-pic
+	&__text
+			width: 470px
+			margin-bottom: 25px
+			position: relative
+			padding: 23px
+			border-radius: 5px
+			box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.4)
+			&::after
+				content: ''
+				display: block
+				position: absolute
+				top: 20px
+				width: 19px
+				height: 40px
+			&_user
+				@extend .chat__text
+				float: right
+				margin-right: 30px
+				&::after
+					left: 100%
+					background: url(../img/sms.png) no-repeat
+			&_admin
+				@extend .chat__text
+				float: left
+				margin-left: 30px
+				&::after
+					right: 100%
+					background: url(../img/sms1.png) no-repeat
+	&__send
+		display: none
+.send
+	display: block
+	position: absolute
+	top: 12px
+	left: 100%
+	&__icon
+		font-size: 26px
+		color: $main-color
+		cursor: pointer

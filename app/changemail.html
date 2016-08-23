@@ -189,57 +189,63 @@
 					<main class="main eq-height">
 						
 						<div class="profile">
-							<div class="profile__title">Редактирование профиля</div>
+							<div class="profile__title">Изменить E-mail</div>
 							<span class="title-line blue"></span>
 							<div class="profile__inner">
-								<div class="profile__photo">
-									<div class="profile__img">
-										<img  src="img/user-big.jpg" class="profile__pic">
-										<span class="profile__pic_hidden"></span>
-										<div class="photo__info">Допустимые форматы jpg, png, максимальный размер 500х500 px</div>
-									</div>
-								</div>
-								<form action="" class="profile__form">
-									<div class="profile__info1">
-										<input class="login__input active" type="text" id="name" value="Наталья">
-										<label class="placeholder" for="name">Имя</label>
-										<input class="login__input active" type="text" id="secname" value="Кулакова">
-										<label class="placeholder" for="secname">Фамилия</label>
-										<input class="login__input active" type="text" id="parent" value="Афанасиевна">
-										<label class="placeholder" for="parent">Отчество</label>
-									</div>
-									<div class="profile__info2">
-										<input class="login__input active" type="text" id="country" value="Украина">
-										<label class="placeholder" for="name">Страна</label>
-										<input class="login__input active" type="text" id="city" value="Львов">
-										<label class="placeholder" for="city">Город</label>
-										<input class="login__input active" type="text" id="phone" value="+38 064 123-65-43">
-										<label class="placeholder" for="phone">Телефон</label>
-									</div>
-									<input class="profile__button active right" type="submit" value="Сохранить">
+								
+								<form action="" class="change-mail__form">
+									<fieldset class="change-form__group">
+										<input class="login__input active" type="text" id="mail" value="natalia@gmail.com">
+									<label class="placeholder" for="mail">Текущий E-mail</label>
+									</fieldset>
+									<fieldset class="change-form__group">
+										<input class="login__input" type="text" placeholder="Новый E-mail">
+									</fieldset>
+									<fieldset class="change-form__group">
+										<input class="login__input" type="text" placeholder="Подтвердите E-mail">
+									</fieldset>
+									<div class="profile__buttons">
+										<input class="profile__button active right" type="submit" value="Сохранить">
+									</div>						
 								</form>
 							</div>
 							<div class="profile__bottom">
-								<div class="profile__change">изменить e-mail</div>
+								<div class="profile__change">редактировать профиль</div>
 								<div class="profile__change">изменить пароль</div>
 							</div>
-
 							
 						</div>
-						
+
+					<div class="pop-up__succes-change">
+						<div class="error__img">
+							<i class="mdi mdi-emoticon-happy thanks__icon"></i>
+						</div>
+						<div class="error__text">
+							Ваш E-mail успешно изменен!
+						</div>
+					</div>
 					
 					</main>
 
+					
+
 					<div class="popup-bg off">
 							<div class="popup-infobox">
-							<div class="profile__change-img">
-								<img  src="img/user-big.jpg" class="change__pic">
-							</div>
-							<div class="profile__buttons">
-								<button class="profile__button left">Отменить</button>
-								<button class="profile__button active right">Сохранить</button>
-								<button class="profile__button right">Загрузить</button>
-							</div>
+								<div class="post-title">
+									Написать Благодарность
+								</div>
+								<span class="title-line blue"></span>
+								<div class="popup__post">
+									<span class="span-title">Введите вашу благодарность</span>
+									<p>Я славлю и превозношу имя Господа! Благодарю Господа за всех служителей "Духовного центра Возрождения", за Апостола Владимира Мунтяна, за его учение, за искренность. Безмерно благодарна всем! Спасибо, радости, радости и еще раз радости в каждом дне, вы истинно моя семья!!!</p>
+								</div>
+								<form action="" class="pop-up__form">
+									<input type="text" class="popup__input">
+								</form>
+								<div class="buttons--right">
+									<button class="button">Отменить</button>
+									<button class="button--blue">Отправить</button>
+								</div>
 							</div>
 						</div>
 				</div>

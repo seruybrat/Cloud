@@ -737,14 +737,19 @@ body {
   border-bottom: 1px dashed #1e88e5; }
 
 .err {
-  color: #f44336 !important; }
+  border-bottom: 2px solid #f44336; }
+  .err + .placeholder {
+    color: #f44336 !important; }
   .err-text {
-    display: block;
+    display: block; }
+  .err-wrap {
+    height: 25px;
     margin-top: 33px;
     text-align: left;
     font-size: 1.125em;
     color: #f44336;
-    visibility: hidden; }
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
 
 /*-------- log - slider -------*/
 .top-img {
@@ -914,6 +919,7 @@ body {
   .profile__info2 {
     float: left;
     width: 35%;
+    overflow: hidden;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
   .profile__change {
