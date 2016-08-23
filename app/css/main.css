@@ -71,7 +71,8 @@ input {
           box-sizing: content-box; }
 
 body {
-  font: 16px 'Roboto', sans-serif; }
+  font: 16px 'Roboto', sans-serif;
+  zoom: 75%; }
 
 .header__logo-pic, .header__search-input {
   display: block;
@@ -159,6 +160,12 @@ body {
   -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.25);
   z-index: 3; }
+  @media (max-width: 990px) {
+    .header {
+      height: 156px; } }
+  @media (max-width: 550px) {
+    .header {
+      height: 234px; } }
   .header__logo {
     width: 176px;
     height: 78px;
@@ -289,6 +296,12 @@ body {
 
 .wrapper {
   margin-top: 78px; }
+  @media (max-width: 990px) {
+    .wrapper {
+      margin-top: 156px; } }
+  @media (max-width: 550px) {
+    .wrapper {
+      margin-top: 234px; } }
 
 /*-------- sidebar -------*/
 .sidebar {
@@ -707,7 +720,7 @@ body {
   transition: all .3s ease;
   z-index: 1; }
 
-.login__input, .profile__input, .chat__input {
+.login__input, .popup__input, .profile__input, .chat__input {
   display: block;
   width: 95%;
   padding: 15px 10px;
@@ -716,9 +729,9 @@ body {
   border-bottom: 2px solid #bdbdbd;
   -webkit-transition: all .3s ease;
   transition: all .3s ease; }
-  .login__input:focus, .profile__input:focus, .chat__input:focus, .login__input.active, .active.profile__input, .active.chat__input {
+  .login__input:focus, .popup__input:focus, .profile__input:focus, .chat__input:focus, .login__input.active, .active.popup__input, .active.profile__input, .active.chat__input {
     border-bottom: 2px solid #1e88e5; }
-    .login__input:focus + .placeholder, .profile__input:focus + .placeholder, .chat__input:focus + .placeholder, .login__input.active + .placeholder, .active.profile__input + .placeholder, .active.chat__input + .placeholder {
+    .login__input:focus + .placeholder, .popup__input:focus + .placeholder, .profile__input:focus + .placeholder, .chat__input:focus + .placeholder, .login__input.active + .placeholder, .active.popup__input + .placeholder, .active.profile__input + .placeholder, .active.chat__input + .placeholder {
       font-size: 0.875em;
       top: -60px;
       color: #1e88e5; }
