@@ -83,7 +83,7 @@ body {
   left: 0;
   margin: auto; }
 
-.sidebar__info__inner:after, .article:after, .post__top:after, .post__bottom:after, .progressbar:after, .profile__inner:after, .profile__form:after, .profile__buttons:after, .change-mail__form:after, .chat__user:after, .chat__admin:after {
+.sidebar__info__inner:after, .article:after, .post__top:after, .post__bottom:after, .progressbar:after, .profile__inner:after, .profile__form:after, .profile__buttons:after, .change-passw__form:after, .change-mail__form:after, .chat__user:after, .chat__admin:after {
   content: '';
   display: table;
   clear: both; }
@@ -514,6 +514,9 @@ body {
     opacity: 0;
     -webkit-transition: all .3s ease;
     transition: all .3s ease; }
+  .help-button.active {
+    bottom: 105px;
+    opacity: 1; }
 
 .blago-button {
   width: 50px;
@@ -530,6 +533,9 @@ body {
     background: #ff9800; }
     .blago-button:hover:after {
       opacity: 1; }
+  .blago-button.active {
+    bottom: 160px;
+    opacity: 1; }
   .blago-button:after {
     content: 'Благодарность';
     position: absolute;
@@ -542,11 +548,30 @@ body {
 
 /*-------- main -------*/
 .main {
-  min-height: 100vh; }
+  min-height: 100vh;
+  background-color: #f5f5f5; }
   .main-bg {
     position: relative;
     z-index: 0;
     background-color: #f5f5f5; }
+  .main-fix {
+    position: fixed;
+    top: 78px;
+    bottom: 0; }
+    @media (max-width: 990px) {
+      .main-fix {
+        top: 156px; } }
+    @media (max-width: 550px) {
+      .main-fix {
+        top: 234px; } }
+  .main-chat {
+    width: 900px; }
+    @media (max-width: 1200px) {
+      .main-chat {
+        width: 700px; } }
+    @media (max-width: 550px) {
+      .main-chat {
+        width: 100%; } }
 
 .margin-main-bg {
   position: absolute;
@@ -1036,15 +1061,27 @@ body {
   /*-------- Chat -------*/ }
 
 .chat {
-  padding-left: 30px; }
+  padding-left: 30px;
+  background-color: #f5f5f5; }
+  @media (max-width: 550px) {
+    .chat {
+      padding-left: 0; } }
   .chat__window {
-    padding-top: 25px;
-    height: 400px;
+    margin-top: 25px;
+    height: 100vh;
     overflow: auto; }
+    @media (max-width: 990px) {
+      .chat__window {
+        height: 80vh; } }
+    @media (max-width: 550px) {
+      .chat__window {
+        height: 70vh; } }
   .chat__enter {
     position: relative;
-    margin-right: 100px;
-    margin-left: 80px; }
+    padding: 0 100px 20px 80px; }
+    @media (max-width: 550px) {
+      .chat__enter {
+        padding: 0 0 20px 0; } }
   .chat__user-pic {
     float: right; }
   .chat__admin-pic {
@@ -1084,7 +1121,7 @@ body {
   display: block;
   position: absolute;
   top: 12px;
-  left: 100%; }
+  right: 0; }
   .send__icon {
     font-size: 26px;
     color: #03a9f4;
