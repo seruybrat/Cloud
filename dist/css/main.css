@@ -420,14 +420,16 @@ body {
 /*-------- navigation -------*/
 .nav__item {
   position: relative;
+  cursor: pointer;
+  padding-bottom: 12px; }
+
+.nav__link {
+  display: block;
   padding: 12px 35px 12px 10px;
-  margin-bottom: 12px;
   border-left: 2px solid #e7ebed;
-  cursor: pointer; }
-  .nav__item:hover, .nav__item.active {
+  color: #03a9f4; }
+  .nav__link:hover, .nav__link.active {
     border-left: 2px solid #81d4f9; }
-    .nav__item:hover .nav__link, .nav__item.active .nav__link {
-      color: #0288d1; }
 
 /*-------- drop-down-list -------*/
 .drop-down__item {
