@@ -889,6 +889,7 @@ body
 		&-img
 			text-align: center
 .photo__info
+	width: 80%
 	display: inline-block
 	padding-top: 30px
 	color: #90a4ae
@@ -1009,3 +1010,69 @@ body
 .mobile
 	padding: 30px 20px
 	text-align: center
+	&__header
+		height: 78px
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		box-sizing: border-box
+		background-color: $main-color
+		box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.25)
+		padding: 21px 20px 0 20px
+		text-align: justify
+		z-index: 3
+		&::after
+			content: ''
+			display: inline-block
+			width: 100%
+			height: 0
+	&__icon
+		font-size: 36px
+		color: #fff
+		cursor: pointer
+		&--sidebar
+			display: inline-block
+			font-size: 36px
+			color: $main-color
+			cursor: pointer
+			vertical-align: top
+			padding-top: 20px
+	&__logo
+		height: 30px
+		width: auto
+	&__main
+		padding-top: 78px
+		.post
+			width: 100%
+		.post__bottom_tags
+			display: none
+	&__sidebar
+		position: fixed
+		width: 90%
+		box-sizing: border-box
+		padding: 0 20px
+		top: 0
+		left: 0
+		bottom: 0
+		z-index: 99
+		background-color: #fff
+	&__contacts
+		padding: 78px 20px 0
+	&__search
+		position: absolute
+		top: 0
+		left: 20px
+		right: 80px
+		bottom: 0
+		z-index: 5
+.nav__item--last
+	@extend .nav__item
+	margin-top: 50px
+.nav__top
+	text-align: justify
+	&::after
+		content: ""
+		display: inline-block
+		width: 100%
+		height: 0
